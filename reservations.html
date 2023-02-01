@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- header -->
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-dark navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="home.html"><img id="headerlogo" class="d-sm-flex img-fluid" src="img/header_logo-whitev2.png"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav d-flex justify-content-between me-auto mb-2 mb-md-0">
             <li class="nav-item" id="navi">
-              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              <a class="nav-link" aria-current="page" href="home.html">Home</a>
             </li>
             <ul class="navbar-nav">
               <li class="nav-item dropdown" id="navi">
@@ -38,7 +38,7 @@
             </ul>
           </li>
             <li class="nav-item" id="navi">
-              <a class="nav-link" href="reservations.html">Reservations</a>
+              <a class="nav-link active" href="reservations.html">Reservations</a>
             </li>                
           </ul>
           <span class="nav-item">
@@ -46,7 +46,7 @@
           <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalContact">
           Contact US!
           </button>        
-        </span>
+          </span>
         </div>
       </div>
       </nav>
@@ -87,7 +87,7 @@
       </div>
     </div>
     </div>
-
+    <!-- modal Success Message -->
     <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -107,10 +107,10 @@
     <main>
         <!-- Reservations Hero -->
         <div class="container-fluid bg-light col-xxl-8 px-4 py-5" id="hero">
-          <div class="col">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Reservations</h1>
-            <div class="row g-4 justify-content-evenly pb-5 row-cols-1 row-cols-lg-3">
-            <div class="col d-flex align-items-start bg-light">
+          <div class="col px-5">
+            <h1 class="display-5 fw-bold lh-1 mb-5">Reservations</h1>
+            <div class="row g-4 justify-content-evenly pb-5 row-cols-1 row-cols-lg-2">
+            <div class="col d-flex align-items-start">
               <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                 <img class="bi" width="50px" height="50px" src="img/reserve.png">
               </div>
@@ -119,7 +119,7 @@
               <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" onclick="location.href='#reservation'">Reserve a Table</button>
               </div>
             </div>
-            <div class="col d-flex align-items-start bg-light">
+            <div class="col d-flex align-items-start">
               <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                 <img class="bi" width="50px" height="50px" src="img/calendar.png">
               </div>
@@ -134,22 +134,24 @@
         <!-- Reservations Form -->
         <section id="reservation">
           <div class="container">
+            <div class="focus-container">              
             <h2>Make a Reservation</h2>
-            <form>
+            </div>
+            <form style="padding-top: 30px;">
               <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name"><b>Name</b></label>
                 <input type="text" class="form-control" id="name" placeholder="Enter your name">
               </div>
               <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email"><b>Email</b></label>
                 <input type="email" class="form-control" id="email" placeholder="Enter your email">
               </div>
               <div class="form-group">
-                <label for="date">Date</label>
+                <label for="date"><b>Date</b></label>
                 <input type="date" class="form-control" id="date">
               </div>
               <div class="form-group">
-                <label for="time">Time</label>
+                <label for="time"><b>Time</b></label>
                 <select class="form-select mb-3" id="time">
                   <option selected>Select a time</option>
                   <option>12:00 PM</option>
@@ -164,8 +166,9 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="guests">Number of Guests</label>
-                <input type="number" class="form-control" id="guests" placeholder="Enter the number of guests">
+                <label for="guests"><b>Number of Guests</b></label>
+                <input type="number" class="form-control" id="guests" required min="1" max="100" placeholder="Enter the number of guests">
+                <span id="error" style="display:none;color:red;">Invalid quantity</span>
               </div>              
               <button type="button" id="send-button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#successModal">Submit</button>
             </form>
@@ -233,5 +236,18 @@
             <div id="success-alert" class="alert alert-success d-none">
               Your message has been sent successfully!
             </div>
+        
+            <script>
+              const input = document.getElementById("guests");
+              const error = document.getElementById("error");
+              
+              input.addEventListener("input", function() {
+                if (input.value < 1 || input.value > 100) {
+                  error.style.display = "block";
+                } else {
+                  error.style.display = "none";
+                }
+              });
+            </script>
 </body>
 </html>

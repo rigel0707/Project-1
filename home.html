@@ -23,42 +23,42 @@
 </head>
 <body>
     <!-- header -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="home.html"><img id="headerlogo" class="d-sm-flex img-fluid" src="img/header_logo-whitev2.png"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav d-flex justify-content-between me-auto mb-2 mb-md-0">
-                  <li class="nav-item" id="navi">
-                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-                  </li>
-                  <ul class="navbar-nav">
-                    <li class="nav-item dropdown" id="navi">
-                      <a class="nav-link dropdown-toggle" href="menu.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Our Menu
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="menu.html#appetizer">Appetizer</a></li>
-                      <li><a class="dropdown-item" href="menu.html#maincourse">Main Course</a></li>
-                      <li><a class="dropdown-item" href="menu.html#drinks">Drinks</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                  <li class="nav-item" id="navi">
-                    <a class="nav-link" href="reservations.html">Reservations</a>
-                  </li>                
+    <nav class="navbar navbar-dark navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"><img id="headerlogo" class="d-sm-flex img-fluid" src="img/header_logo-whitev2.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav d-flex justify-content-between me-auto mb-2 mb-md-0">
+            <li class="nav-item" id="navi">
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+            </li>
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown" id="navi">
+                <a class="nav-link dropdown-toggle" href="menu.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Our Menu
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="menu.html#appetizer">Appetizer</a></li>
+                <li><a class="dropdown-item" href="menu.html#maincourse">Main Course</a></li>
+                <li><a class="dropdown-item" href="menu.html#drinks">Drinks</a></li>
                 </ul>
-                <span class="nav-item">
-                  <!-- Trigger button -->
-                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalContact">
-                Contact US!
-                </button>        
-              </span>
-              </div>
-            </div>
+              </li>
+            </ul>
+          </li>
+            <li class="nav-item" id="navi">
+              <a class="nav-link" href="reservations.html">Reservations</a>
+            </li>                
+          </ul>
+          <span class="nav-item">
+            <!-- Trigger button -->
+          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalContact">
+          Contact US!
+          </button>        
+        </span>
+        </div>
+      </div>
     </nav>
     <!-- modal Contact US! -->
     <div class="modal bg-dark fade" tabindex="-1" role="dialog" id="modalContact">
