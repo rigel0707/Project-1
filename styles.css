@@ -9,9 +9,7 @@ html {
 
 #offcanvasNavbar{
   background-color: #1168FF;
-  max-height: fit-content;
-
-}
+ }
 
 .navbar {
     position: sticky;
