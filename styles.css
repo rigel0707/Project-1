@@ -62,6 +62,9 @@ body {
     #headerlogotext {
       display: none;
     }
+    #footerlogo{
+      display: none;
+    }
   }
 
   @media (max-width: 595px) {
