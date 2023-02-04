@@ -13,32 +13,38 @@
 </head>
 <body>
     <!-- header -->
-    <nav class="navbar navbar-dark navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="home.html"><img id="headerlogo" class="d-sm-flex img-fluid" src="img/header_logo-whitev2.png"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="home.html"><img id="headerlogo" class=" img-fluid" src="img/header_logo-whitev2.png"><img id="headerlogotext" class=" img-fluid" src="img/header-logo-textv5.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Welcome to Sharkky's Kitchen</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+        <div class="offcanvas-body">
           <ul class="navbar-nav d-flex justify-content-between me-auto mb-2 mb-md-0">
-            <li class="nav-item" id="navi">
-              <a class="nav-link" aria-current="page" href="home.html">Home</a>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="home.html" style="color: white;">Home</a>
             </li>
             <ul class="navbar-nav">
-              <li class="nav-item dropdown" id="navi">
-                <a class="nav-link active dropdown-toggle" href="menu.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="menu.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; text-decoration: underline;">
                 Our Menu
                 </a>
                 <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="menu.html#appetizer">Appetizer</a></li>
                 <li><a class="dropdown-item" href="menu.html#maincourse">Main Course</a></li>
+                <li><a class="dropdown-item" href="menu.html#dessert">Desserts</a></li>
                 <li><a class="dropdown-item" href="menu.html#drinks">Drinks</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-            <li class="nav-item" id="navi">
-              <a class="nav-link" href="reservations.html">Reservations</a>
+            <li class="nav-item">
+              <a class="nav-link" href="reservations.html" style="color: white;">Reservations</a>
             </li>                
           </ul>
           <span class="nav-item">
@@ -78,7 +84,7 @@
                 <textarea class="form-control" id="floatingMessage" placeholder="Enter your message here"></textarea>
               </div>
             </form>
-            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-secondary" type="submit" id="submit-btn">Send</button>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" id="submit-btn">Send</button>
           </form>
           <div id="success-alert" class="alert alert-success d-none">
             Your message has been sent successfully!
@@ -88,26 +94,300 @@
     </div>
     </div>
     <main>
-        <!-- Menu Hero -->
-        <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
-            <img src="https://picsum.photos/700/500" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      <!-- Menu Hero -->
+      <div class="banner">
+          <div class="banner-text">
+            <h3>Our Menu</h3>
+              <p>Indulge in a culinary journey with every bite.<p>
           </div>
-          <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
-            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+      </div> 
+      <!-- Accordion Menu -->
+      <div class="accordion" id="accMenu">
+        <!-- Appetizer -->
+        <div class="accordion-item" id="appetizer">
+          <h2 class="accordion-header">
+            <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-weight: bolder;">
+              Appetizers
+            </a>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accMenu">
+            <div class="accordion-body">
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>              
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+                </li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+                <li class="list-group-item">Bruschetta<div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div></li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+                <li class="list-group-item">Bruschetta<div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div></li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+              </ul>
             </div>
           </div>
         </div>
+        <!-- Main Course -->
+        <div class="accordion-item" id="maincourse">
+          <h2 class="accordion-header">
+            <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="font-weight: bolder;">
+              Main Course
+            </a>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accMenu">
+            <div class="accordion-body">
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>              
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+                </li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+                <li class="list-group-item">Bruschetta<div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div></li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+                <li class="list-group-item">Bruschetta<div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div></li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <!-- footer -->
-        <footer>
+        <!-- Dessert -->
+        <div class="accordion-item" id="dessert">
+          <h2 class="accordion-header">
+            <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="font-weight: bolder;">
+              Desserts
+            </a>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accMenu">
+            <div class="accordion-body">
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>              
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+                </li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+                <li class="list-group-item">Bruschetta<div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div></li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+                <li class="list-group-item">Bruschetta<div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div></li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Drinks -->
+        <div class="accordion-item" id="drinks">
+          <h2 class="accordion-header">
+            <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="font-weight: bolder;">
+              Drinks
+            </a>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accMenu">
+            <div class="accordion-body">
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>              
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="listItem" style="color: black;">
+                <div class="row">
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                  <div class="col-6">
+                    <div>Bruschetta</div>
+                    <div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div>
+                  </div>
+                </div>
+              </div>
+                </li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+                <li class="list-group-item">Bruschetta<div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div></li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+                <li class="list-group-item">Bruschetta<div id="listItemDesc">grilled bread, garlic, tomatoes, basil</div></li>
+                <li class="list-group-item">Calamari</li>
+                <li class="list-group-item">Stuffed Mushrooms</li>
+              </ul>
+            </div>
+          </div>
+        </div>        
+      </div>
+      <!-- footer -->
+      <footer>
           <div class="container">
-            <footer class="d-flex split flex-wrap justify-content-evenly align-items-center pt-3 mt-4">
+            <footer class="d-flex split flex-wrap justify-content-evenly align-items-center pt-3">
               <!-- Address -->
               <div class="col-md-3 d-flex align-items-center" id="footerAddress">
                 <ul class="list-unstyled">
@@ -144,7 +424,7 @@
               <span class="mb-3 mb-md-0 text">&copy; 2023 Sharkky's Kitchen, Inc</span>
             </div>
           </div>
-        </footer>
+      </footer>
     </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <script>
