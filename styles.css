@@ -341,9 +341,9 @@ a.text {
   }
 
   #drinks{
-    background: url('img/drinks.jpg') no-repeat fixed 70% 0;
+    background: url('img/drinksv2.jpg') no-repeat fixed 70% 0;
     background-size: cover;
-    --bs-accordion-btn-bg: url('img/drinks.jpg');
+    --bs-accordion-btn-bg: url('img/drinksv2.jpg');
     --bs-accordion-active-bg: #cfe2ff00;
     --bs-accordion-border-color: none;
   }
@@ -356,6 +356,7 @@ a.text {
 
   #listItemDesc{
     font-size: 12px;
+    font-style: italic;
   }
 
   .accordion-button{
