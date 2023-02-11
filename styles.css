@@ -149,7 +149,7 @@ a.text {
 }
 
 
-/* reservations page (make separate css) */
+/* reservations page */
 
 #reservation {
     padding: 50px 0;
@@ -294,7 +294,7 @@ a.text {
   }
   
 
-  /* menu css */
+  /* menu page */
 
   .banner {
     background: url('img/menubannerv2.png') no-repeat fixed 50% 0;
@@ -359,6 +359,10 @@ a.text {
     font-style: italic;
   }
 
+  .accordion {
+    --bs-accordion-border-radius: 0;
+  }
+
   .accordion-button{
     --bs-accordion-btn-color: #ffffff;
     --bs-accordion-active-color: #ffffff;
@@ -372,6 +376,77 @@ a.text {
   .accordion-button:not(.collapsed)::after {
     --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-caret-down-fill' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
   }
+
+
+/* home page */
+
+.carousel {
+  margin-bottom: 0px;
+}
+
+#carou1 {
+  background: url(img/carousel1.jpg) center;
+  background-size: cover;
+}
+
+#carou2 {
+  background: url(img/carousel2.jpg) center;
+  background-size: cover;
+}
+
+#carou3 {
+  background: url(img/carousel3.jpg) center;
+  background-size: cover;
+}
+
+.carousel-caption {
+  background-color: #ffffffa3;
+  color: black;
+
+}
+
+.display-5 {
+  text-shadow: 2px 2px 5px gray;
+}
+
+.lead {
+  box-shadow: 10px 10px 10px 5px #b3e6ff;
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+
+/*
+.hero {
+  /* Photo by mnm.all on Unsplash */
+  /* background: url('https://images.unsplash.com/photo-1518176258769-f227c798150e') center; */
+  /* background-size: cover;
+  padding: 4rem 2rem; */
+  /* grid styles
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+}
+
+.hero > * {
+  color: white;
+}
+
+.hero > h1 {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.hero > article > p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.hero > article > a {
+  padding: 1rem;
+  margin-top: .75rem;
+} */
+
 
 
 

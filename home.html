@@ -20,6 +20,7 @@
             });     
     </script>
     <link rel="stylesheet" type="text/css" href="styles.css">
+
 </head>
 <body>
     <!-- header -->
@@ -67,6 +68,7 @@
         </div>
       </div>
     </nav>
+    
     <!-- modal Contact US! -->
     <div class="modal bg-dark fade" tabindex="-1" role="dialog" id="modalContact">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -105,76 +107,82 @@
     </div>
     </div>
 
-    <main>
-    <!-- carousel w/ jumbotron -->
-    <div id="myCarousel" class="carousel slide pt-0" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img width="100%" height="100%" src="https://picsum.photos/1300/500" alt="img">
-
-                <div class="container">
-                  <div class="carousel-caption text-start">
-                    <h1>Example headline.</h1>
-                    <p>Some representative placeholder content for the first slide of the carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img width="100%" height="100%" src="https://picsum.photos/1300/502" alt="img">
-        
-                <div class="container">
-                  <div class="carousel-caption">
-                    <div class="h-100 p-5 text-bg-dark rounded-3">
-                        <h2>Change the background</h2>
-                        <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-                        <button class="btn btn-outline-light" type="button">Example button</button>
-                      </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img width="100%" height="100%" src="https://picsum.photos/1300/501" alt="img">
-        
-                <div class="container">
-                  <div class="carousel-caption text-end">
-                    <div class="h-100 p-5 bg-light border rounded-3" style="color:black !important ">
-                        <h2>Add borders</h2>
-                        <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-                        <button class="btn btn-outline-secondary" type="button">Example button</button>
-                      </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+    <!-- modal Map -->
+    <div class="modal fade" id="modalMap" tabindex="-1" role="dialog" aria-labelledby="mapModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mapModalLabel">Location Map</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          <div class="modal-body">
+            <!-- Map container -->
+            <div class="container ratio ratio-4x3" id="map"><iframe src="https://maps.google.com/maps?q=Maharlika%20East%2C%20Tagaytay%2C%20Cavite&t=&z=13&ie=UTF8&iwloc=&output=embed" width="300" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" id="map"></iframe></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <main>
+    <!-- carousel -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" id="carou1">
+          <div class="container">
+            <div class="carousel-caption text-start rounded px-3">
+              <h1>You Hungry?</h1>
+              <p>Explore the taste of authentic cuisine at our restaurant. Savor the flavors, indulge in the aroma. Dine with us, and treat your taste buds to a journey of culinary delight.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" id="carou2">
+          <div class="container">
+            <div class="carousel-caption rounded px-3">
+              <h4 >Discover the Delight in Every Bite</h4>
+              <div style="font-style: italic;">Our Menu Awaits Your Explorations</div>
+              <br>
+              <p><a class="btn btn-lg btn-primary" href="menu.html">Click Here</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item"id="carou3"> 
+          <div class="container">
+            <div class="carousel-caption text-start rounded px-3">
+              <h1>Reserve your Seats now!</h1>
+              <p>or Book an Event!</p>
+              <p class="text-end"><a class="btn btn-lg btn-primary" href="reservations.html">Reservations</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
 
     <!-- hero -->
-    <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="container-fluid px-4">
+        <div class="row flex-lg-row-reverse align-items-center g-5 px-2 py-5" style="background-color: #2490afba;">
           <div class="col-10 col-sm-8 col-lg-6">
-            <img src="https://picsum.photos/700/500" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            <img src="img/header_logo-whitev2.png" class="d-block mx-lg-auto img-fluid" loading="lazy">
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
-            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <h1 class="display-5 fw-bold lh-1 mb-3" style="font-style: italic;">Welcome to Sharkky's Kitchen</h1>
+            <p class="lead p-3">We strive to provide a warm and inviting atmosphere for all of our guests. Our menu offers a variety of delicious dishes made from fresh, locally sourced ingredients, and our chefs take pride in preparing each meal with care and passion. From classic comfort foods to innovative fusion dishes, we have something to suit every taste and appetite. So visit us now to have a memorable dining experience.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#modalMap">Location</button>
             </div>
+            
           </div>
         </div>
     </div>
@@ -185,7 +193,7 @@
     </section>
 
     <!-- Custom Cards -->
-    <div class="container px-4 py-5" id="custom-cards">
+    <!-- <div class="container px-4 py-5" id="custom-cards">
         <h2 class="pb-2 border-bottom">Custom cards</h2>
     
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
@@ -239,7 +247,7 @@
             </div>
           </div>
         </div>
-    </div>
+    </div> -->
     
     <!-- footer -->
     <footer>
